@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gameplayce.ru</title>
+    <link rel="stylesheet" href="./css/nice-select.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+</head>
+<body class="admin">
+    <header class="header">
+        <div class="wrapper">
+            <a href="/" class="header-back"><- Назад к сайту</a>
+            <h2 class="header-title">Статистика</h2>
+            <div class="header-stats">
+                <div class="header-item">
+                    <p class="header-text">Игр в списке всего -> 120</p>
+                    <p class="header-text">Активных -> 115</p>
+                    <p class="header-text">Не активных -> 5</p>
+                </div>
+                <div class="header-item">
+                    <p class="header-text">Скачали за все время -> 1.000</p>
+                    <p class="header-text">Cкачали за сегодня -> 10.000</p>
+                    <p class="header-text">Топ по играм -></p>
+                    <ul class="header-list">
+                        <li class="header-list__item">World Of Tanks</li>
+                        <li class="header-list__item">World Of Tanks</li>
+                        <li class="header-list__item">World Of Tanks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <nav class="menu" id="header">
+                <div class="menu-search">
+                    <input type="text" placeholder="Введите название жанр или название игры">
+                </div>
+                <ul class="menu-list">
+                    <li class="menu-item menu-item__active">
+                        <a href="#stat-games" class="menu-link">Список игр</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#stat-settings" class="menu-link">Категории, события. жанр и подключение</a>
+                    </li> 
+                </ul>
+            </nav>
+            <div class="settings" id="stat-settings">
+                <div class="settings-events">
+                    <h2 class="settings-events__title">Управление событиями</h2>
+                    <form class="settings-events__new">
+                        <div class="settings-events__input">
+                            <input type="text" placeholder="Введите событие">
+                        </div>
+                        <div class="settings-events__input">
+                            <input type="text" placeholder="Код цвета (HEX)">
+                        </div>
+                        <button type="submit" class="settings-events__btn">Добавить</button>
+                    </form>
+                    <h2 class="settings-events__subtitle">Уже добавленные события -></h2>
+                    <form class="settings-events__edit">
+                        <div class="settings-events__preview" style="background: #ff3232;">
+                            <p>Выбор этой недели</p>
+                        </div>
+                        <div class="settings-events__input">
+                            <input type="text" placeholder="#ff3232">
+                        </div>
+                        <button type="submit" class="settings-events__btn">Редактировать</button>
+                        <button type="submit" class="settings-events__btn">Удалить</button>
+                    </form>
+                    <form class="settings-events__edit">
+                        <div class="settings-events__preview" style="background: #8432ff;">
+                            <p>Новое обновление</p>
+                        </div>
+                        <div class="settings-events__input">
+                            <input type="text" placeholder="#8432ff">
+                        </div>
+                        <button type="submit" class="settings-events__btn">Редактировать</button>
+                        <button type="submit" class="settings-events__btn">Удалить</button>
+                    </form>
+                    <form class="settings-events__edit">
+                        <div class="settings-events__preview" style="background: #3297ff;">
+                            <p>Выбор игроков</p>
+                        </div>
+                        <div class="settings-events__input">
+                            <input type="text" placeholder="#ff3232">
+                        </div>
+                        <button type="submit" class="settings-events__btn">Редактировать</button>
+                        <button type="submit" class="settings-events__btn">Удалить</button>
+                    </form>
+                </div>
+                <div class="settings-other">
+                    <div class="settings-genre">
+                        <h2 class="settings-genre__title">Управление жанрами</h2>
+                        <form class="settings-genre__new">
+                            <div class="settings-genre__input">
+                                <input type="text" placeholder="Введите жанр">
+                            </div>
+                            <button type="submit" class="settings-genre__btn">Добавить</button>
+                        </form>
+                        <h2 class="settings-genre__subtitle">Уже добавленные жанры -></h2>
+                        <form class="settings-genre__edit">
+                            <div class="settings-genre__input">
+                                <input type="text" placeholder="ММО">
+                            </div>
+                            <button type="submit" class="settings-genre__btn">Редактировать</button>
+                            <button type="submit" class="settings-genre__btn">Удалить</button>
+                        </form>
+                        <form class="settings-genre__edit">
+                            <div class="settings-genre__input">
+                                <input type="text" placeholder="Шутер">
+                            </div>
+                            <button type="submit" class="settings-genre__btn">Редактировать</button>
+                            <button type="submit" class="settings-genre__btn">Удалить</button>
+                        </form>
+                    </div>
+                    <div class="settings-connection">
+                        <h2 class="settings-connection__title">Управление типом подключения</h2>
+                        <form class="settings-connection__new">
+                            <div class="settings-connection__input">
+                                <input type="text" placeholder="Введите тип">
+                            </div>
+                            <button type="submit" class="settings-connection__btn">Добавить</button>
+                        </form>
+                        <h2 class="settings-connection__subtitle">Уже добавленные типы подключения -></h2>
+                        <form class="settings-connection__edit">
+                            <div class="settings-connection__input">
+                                <input type="text" placeholder="Клиентская">
+                            </div>
+                            <button type="submit" class="settings-connection__btn">Редактировать</button>
+                            <button type="submit" class="settings-connection__btn">Удалить</button>
+                        </form>
+                        <form class="settings-connection__edit">
+                            <div class="settings-connection__input">
+                                <input type="text" placeholder="Онлайн">
+                            </div>
+                            <button type="submit" class="settings-connection__btn">Редактировать</button>
+                            <button type="submit" class="settings-connection__btn">Удалить</button>
+                        </form>
+                    </div>
+                    <div class="settings-cat">
+                        <h2 class="settings-cat__title">Управление категориями</h2>
+                        <form class="settings-cat__new">
+                            <div class="settings-cat__input">
+                                <input type="text" placeholder="Введите категорию">
+                            </div>
+                            <button type="submit" class="settings-cat__btn">Добавить</button>
+                        </form>
+                        <h2 class="settings-cat__subtitle">Уже добавленные категории -></h2>
+                        <form class="settings-cat__edit">
+                            <div class="settings-cat__input">
+                                <input type="text" placeholder="Новые онлайн игры 2021 года">
+                            </div>
+                            <button type="submit" class="settings-cat__btn">Редактировать</button>
+                            <button type="submit" class="settings-cat__btn">Удалить</button>
+                        </form>
+                        <form class="settings-cat__edit">
+                            <div class="settings-cat__input">
+                                <input type="text" placeholder="Новые онлайн игры 2022 года">
+                            </div>
+                            <button type="submit" class="settings-cat__btn">Редактировать</button>
+                            <button type="submit" class="settings-cat__btn">Удалить</button>
+                        </form>
+                        <form class="settings-cat__edit">
+                            <div class="settings-cat__input">
+                                <input type="text" placeholder="Новые онлайн игры 2023 года">
+                            </div>
+                            <button type="submit" class="settings-cat__btn">Редактировать</button>
+                            <button type="submit" class="settings-cat__btn">Удалить</button>
+                        </form>
+                        <form class="settings-cat__edit">
+                            <div class="settings-cat__input">
+                                <input type="text" placeholder="Новые онлайн игры 2024 года">
+                            </div>
+                            <button type="submit" class="settings-cat__btn">Редактировать</button>
+                            <button type="submit" class="settings-cat__btn">Удалить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="games" id="stat-games">
+                <div class="games-item games-item__new">
+                    <p class="games-item__new-icon">+</p>
+                    <p class="games-item__new-text">Добавить игру</p>
+                </div>
+                <div class="games-item wot">
+                    <div class="games-item__overlay disabled">
+                        <div class="games-item__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for=""></label>
+                        </div>
+                        <div class="games-item__settings"></div>
+                    </div>
+                </div>
+                <div class="games-item wot">
+                    <div class="games-item__overlay disabled">
+                        <div class="games-item__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for=""></label>
+                        </div>
+                        <div class="games-item__settings"></div>
+                    </div>
+                </div>
+                <div class="games-item wot">
+                    <div class="games-item__overlay disabled">
+                        <div class="games-item__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for=""></label>
+                        </div>
+                        <div class="games-item__settings"></div>
+                    </div>
+                </div>
+                <div class="games-item wot">
+                    <div class="games-item__overlay disabled">
+                        <div class="games-item__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for=""></label>
+                        </div>
+                        <div class="games-item__settings"></div>
+                    </div>
+                </div>
+                <div class="games-item wot">
+                    <div class="games-item__overlay disabled">
+                        <div class="games-item__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for=""></label>
+                        </div>
+                        <div class="games-item__settings"></div>
+                    </div>
+                </div>
+                <div class="games-item wot">
+                    <div class="games-item__overlay disabled">
+                        <div class="games-item__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for=""></label>
+                        </div>
+                        <div class="games-item__settings"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal-background"></div>
+    <div class="modal">
+        <h2 class="modal-title">Добавление новой игры</h2>
+        <form class="modal-content">
+            <div class="modal-image">
+                <input type="file" name="image" id="modal-upload">
+                <p class="modal-image__icon">+</p>
+                <p class="modal-image__text">Загрузить картинку</p>
+            </div>
+            <div class="modal-form">
+                <div class="modal-inputs">
+                    <div class="modal-input__double mr24">
+                        <div class="modal-input">
+                            <input type="text" placeholder="Введите название игры">
+                        </div>
+                        <div class="modal-select">
+                            <select name="" id="">
+                                <option data-display='Выберите жанр игры'>Выберите жанр игры</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-select mr24">
+                        <select name="" id="">
+                            <option data-display='Выберите категорию игры'>Выберите категорию игры</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="modal-select">
+                        <select name="" id="">
+                            <option data-display='Без событий'>Без событий</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="modal-select"></div>
+                </div>
+                <div class="modal-inputs">
+                    <div class="modal-input__double mr24">
+                        <div class="modal-input">
+                            <input type="text" placeholder="Введите ссылку для «Играть сейчас»">
+                        </div>
+                        <div class="modal-select">
+                            <select name="" id="">
+                                <option data-display='Выберите тип подключения'>Выберите тип подключения</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-input mr24">
+                        <input type="text" placeholder="Введите ссылку для «Узнать подробнее»">
+                    </div>
+                    <div class="modal-input__double">
+                        <div class="modal-input__row">
+                            <div class="modal-input">
+                                <input type="text" placeholder="1000">
+                            </div>
+                            <div class="modal-input">
+                                <input type="text" placeholder="200">
+                            </div>
+                        </div>
+                        <div class="modal-checkbox">
+                            <input type="checkbox">
+                            <label for="">Настоящие данные + добавленные</label>
+                        </div>
+                    </div>
+                    <div class="modal-select"></div>
+                </div>
+                <button type="submit" class="modal-btn">Сохранить и добавить</button>
+            </div>
+        </form>
+    </div>
+    <script src="./js/jq.js"></script>
+    <script src="./js/jquery.nice-select.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

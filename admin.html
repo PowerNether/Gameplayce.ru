@@ -150,34 +150,36 @@
                             <button type="submit" class="settings-cat__btn">Добавить</button>
                         </form>
                         <h2 class="settings-cat__subtitle">Уже добавленные категории -></h2>
-                        <form class="settings-cat__edit">
-                            <div class="settings-cat__input">
-                                <input type="text" placeholder="Новые онлайн игры 2021 года">
-                            </div>
-                            <button type="submit" class="settings-cat__btn">Редактировать</button>
-                            <button type="submit" class="settings-cat__btn">Удалить</button>
-                        </form>
-                        <form class="settings-cat__edit">
-                            <div class="settings-cat__input">
-                                <input type="text" placeholder="Новые онлайн игры 2022 года">
-                            </div>
-                            <button type="submit" class="settings-cat__btn">Редактировать</button>
-                            <button type="submit" class="settings-cat__btn">Удалить</button>
-                        </form>
-                        <form class="settings-cat__edit">
-                            <div class="settings-cat__input">
-                                <input type="text" placeholder="Новые онлайн игры 2023 года">
-                            </div>
-                            <button type="submit" class="settings-cat__btn">Редактировать</button>
-                            <button type="submit" class="settings-cat__btn">Удалить</button>
-                        </form>
-                        <form class="settings-cat__edit">
-                            <div class="settings-cat__input">
-                                <input type="text" placeholder="Новые онлайн игры 2024 года">
-                            </div>
-                            <button type="submit" class="settings-cat__btn">Редактировать</button>
-                            <button type="submit" class="settings-cat__btn">Удалить</button>
-                        </form>
+                        <div class="form-list">
+                            <form class="settings-cat__edit">
+                                <div class="settings-cat__input">
+                                    <input type="text" placeholder="Новые онлайн игры 2021 года">
+                                </div>
+                                <button type="submit" class="settings-cat__btn">Редактировать</button>
+                                <button type="submit" class="settings-cat__btn">Удалить</button>
+                            </form>
+                            <form class="settings-cat__edit">
+                                <div class="settings-cat__input">
+                                    <input type="text" placeholder="Новые онлайн игры 2022 года">
+                                </div>
+                                <button type="submit" class="settings-cat__btn">Редактировать</button>
+                                <button type="submit" class="settings-cat__btn">Удалить</button>
+                            </form>
+                            <form class="settings-cat__edit">
+                                <div class="settings-cat__input">
+                                    <input type="text" placeholder="Новые онлайн игры 2023 года">
+                                </div>
+                                <button type="submit" class="settings-cat__btn">Редактировать</button>
+                                <button type="submit" class="settings-cat__btn">Удалить</button>
+                            </form>
+                            <form class="settings-cat__edit">
+                                <div class="settings-cat__input">
+                                    <input type="text" placeholder="Новые онлайн игры 2024 года">
+                                </div>
+                                <button type="submit" class="settings-cat__btn">Редактировать</button>
+                                <button type="submit" class="settings-cat__btn">Удалить</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -192,7 +194,20 @@
                             <input type="checkbox" name="" id="">
                             <label for=""></label>
                         </div>
-                        <div class="games-item__settings"></div>
+                        <div 
+                            class="games-item__settings" 
+                            data-preview='./image/wot.png'
+                            data-title='World Of Tanks'
+                            data-genre='1'
+                            data-category='1'
+                            data-events='1'
+                            data-link='https://google.com'
+                            data-connection='1'
+                            data-link__more='https://google.com'
+                            data-like='1000'
+                            data-dislike='200'
+                            data-real='true'
+                        ></div>
                     </div>
                 </div>
                 <div class="games-item wot">
@@ -247,7 +262,7 @@
     <div class="modal">
         <h2 class="modal-title">Добавление новой игры</h2>
         <form class="modal-content">
-            <div class="modal-image">
+            <div class="modal-image" name='preview'>
                 <input type="file" name="image" id="modal-upload">
                 <p class="modal-image__icon">+</p>
                 <p class="modal-image__text">Загрузить картинку</p>
@@ -256,10 +271,10 @@
                 <div class="modal-inputs">
                     <div class="modal-input__double mr24">
                         <div class="modal-input">
-                            <input type="text" placeholder="Введите название игры">
+                            <input type="text" placeholder="Введите название игры" name="title">
                         </div>
                         <div class="modal-select">
-                            <select name="" id="">
+                            <select name="genre" id="">
                                 <option data-display='Выберите жанр игры'>Выберите жанр игры</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -268,7 +283,7 @@
                         </div>
                     </div>
                     <div class="modal-select mr24">
-                        <select name="" id="">
+                        <select name="category" id="">
                             <option data-display='Выберите категорию игры'>Выберите категорию игры</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -276,22 +291,21 @@
                         </select>
                     </div>
                     <div class="modal-select">
-                        <select name="" id="">
+                        <select name="events" id="">
                             <option data-display='Без событий'>Без событий</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
                     </div>
-                    <div class="modal-select"></div>
                 </div>
                 <div class="modal-inputs">
                     <div class="modal-input__double mr24">
                         <div class="modal-input">
-                            <input type="text" placeholder="Введите ссылку для «Играть сейчас»">
+                            <input type="text" placeholder="Введите ссылку для «Играть сейчас»" name="link">
                         </div>
                         <div class="modal-select">
-                            <select name="" id="">
+                            <select name="connection" id="">
                                 <option data-display='Выберите тип подключения'>Выберите тип подключения</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -300,23 +314,22 @@
                         </div>
                     </div>
                     <div class="modal-input mr24">
-                        <input type="text" placeholder="Введите ссылку для «Узнать подробнее»">
+                        <input type="text" placeholder="Введите ссылку для «Узнать подробнее»" name="link__more">
                     </div>
                     <div class="modal-input__double">
                         <div class="modal-input__row">
                             <div class="modal-input">
-                                <input type="text" placeholder="1000">
+                                <input type="text" placeholder="1000" name="like">
                             </div>
                             <div class="modal-input">
-                                <input type="text" placeholder="200">
+                                <input type="text" placeholder="200" name="dislike">
                             </div>
                         </div>
                         <div class="modal-checkbox">
-                            <input type="checkbox">
+                            <input type="checkbox" name="real">
                             <label for="">Настоящие данные + добавленные</label>
                         </div>
                     </div>
-                    <div class="modal-select"></div>
                 </div>
                 <button type="submit" class="modal-btn">Сохранить и добавить</button>
             </div>

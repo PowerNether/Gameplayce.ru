@@ -61,6 +61,10 @@ table {
   border-spacing: 0;
 }
 
+#fv-dots {
+  left: 97%;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1346px;
@@ -175,7 +179,6 @@ table {
 .games-header__more:hover {
   color: #3ccaff;
 }
-
 .games-list {
   display: flex;
   align-items: stretch;
@@ -892,7 +895,7 @@ table {
   margin-bottom: 16px;
   position: relative;
 }
-.settings-cat__edit:last-of-type::before {
+.settings-cat__edit::before {
   content: '';
   background: url('./../image/UpDown.png') center / 20px 14px no-repeat;
   display: block;
@@ -918,6 +921,10 @@ table {
   font-weight: 300;
   color: #ffffff;
   text-align: center;
+}
+
+.selected {
+  opacity: 0.6;
 }
 
 /* Modal styles */

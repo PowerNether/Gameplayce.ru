@@ -24,6 +24,23 @@
     .admin .menu-link {
         font-size: 16px;
     }
+    .modal-content {
+        align-items: flex-start;
+    }
+    .modal-inputs {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .modal-input__double {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .mr24 {
+        margin-right: 0;
+    }
+    .modal-select {
+        margin-bottom: 8px;
+    }
 }
 @media screen and (max-width: 1280px) {
     .settings-other {
@@ -108,6 +125,17 @@
     }
     .admin .header-stats {
         flex-direction: column;
+    }
+    .modal-content {
+        flex-direction: column;
+    }
+    .modal-image {
+        margin: 0 auto;
+    }
+    .modal {
+        box-sizing: border-box;
+        max-height: calc(100% - 20px);
+        overflow-y: auto;
     }
 }
 @media screen and (max-width: 580px) {
